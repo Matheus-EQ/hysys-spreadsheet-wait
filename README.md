@@ -97,4 +97,6 @@ This project is an independent utility and is not affiliated with,
 endorsed by, or maintained by Aspen Technology.
 
 Aspen HYSYS is a trademark of Aspen Technology, Inc.
+
+## License
 This project is available under the MIT License.
