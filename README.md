@@ -25,15 +25,6 @@ The function confirms that the selected spreadsheet results are
 available. Depending on the simulation, additional checks may be
 required to confirm that every operation has converged successfully.
 
-## Requirements
-
-- Python 3
-- Aspen HYSYS with COM automation available
-- A HYSYS simulation containing spreadsheet operations
-
-If Python is also responsible for opening and controlling HYSYS, the
-`pywin32` package is commonly used to access the COM interface.
-
 ## Usage
 
 ```python
@@ -69,6 +60,13 @@ if not results_ready:
 4. The cells are checked again after a short interval.
 5. The function returns `True` when all cells are ready.
 6. It returns `False` if the timeout is reached.
+
+The timeout is a maximum waiting time, not a fixed delay. The function
+returns immediately when all selected cells contain valid numeric values.
+
+For example, with a 40-second timeout, if all cells become ready after
+5 seconds, execution continues after approximately 5 seconds. The
+remaining 35 seconds are not awaited.
 
 ## Customization
 
