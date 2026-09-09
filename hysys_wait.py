@@ -31,10 +31,12 @@ def wait_for_spreadsheet_cells(
         ]
 
     timeout:
-        Maximum waiting time, in seconds.
-
+        Maximum waiting time, in seconds. This is not a fixed delay.
+        The function returns immediately when all cells are ready.
+    
     polling_interval:
-        Time between consecutive checks, in seconds.
+        Time between consecutive checks, in seconds. For example, a value
+        of 0.5 checks the cells approximately twice per second.
 
     Returns
     -------
